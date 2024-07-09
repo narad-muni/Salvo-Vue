@@ -14,6 +14,7 @@ pub fn frontend_route() -> Router{
             StaticDir::new([
                 "./public",
             ])
+            .fallback("index.html")
             .defaults("index.html")
             .auto_list(true)
         )
